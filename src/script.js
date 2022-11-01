@@ -9,7 +9,7 @@ addbtn.addEventListener(`click`, addTodo);
 function addTodo(e) {
 
     if(input.value === "") {
-        window.alert("You have to write something!")
+        window.alert("Write something before adding!")
         return;
     }
 
@@ -26,9 +26,9 @@ function addTodo(e) {
     deleteBtn.innerText = "Remove";
 
     // Adding tailwindcss with class to the DOM elements
-    todoDiv.classList.add("flex", "flex-row", "gap-5", "justify-between", "py-1");
+    todoDiv.classList.add("flex", "flex-row", "gap-5", "justify-between", "items-center", "py-1");
     todoItem.classList.add("text-white", "p-1");
-    deleteBtn.classList.add("text-white", "border-2", "border-red-600", "rounded-xl", "p-1", "hover:border-white", "hover:text-red-400");
+    deleteBtn.classList.add("text-white", "border-2", "border-red-600", "rounded-xl", "py-2", "px-4", "hover:border-white", "hover:text-red-400");
 
     // Appending the DOM elements
     todoDiv.appendChild(todoItem);
